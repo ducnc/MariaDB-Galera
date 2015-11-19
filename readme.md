@@ -24,7 +24,7 @@ mô hình
 
 Thực hiện trên 3 node
 
-##1. Add MariaDB Repo
+##2.1. Add MariaDB Repo
 
 ```
 
@@ -43,7 +43,7 @@ add-apt-repository 'deb http://mirrors.syringanetworks.net/mariadb/repo/5.5/ubun
 ```
 
 
-##2. Install MariaDB with Galera Patches
+##2.2. Install MariaDB with Galera Patches
 
 ```
 
@@ -57,7 +57,7 @@ Nếu chưa có rsync thì phải install rsync
 `apt-get install rsync`
 
 
-##3. Config
+##2.3. Config
 
 
 tạo file /etc/mysql/conf.d/cluster.cnf trên mỗi node với nội dung sau
@@ -140,7 +140,7 @@ wsrep_node_name="node-1"
 - Phần "Galera Synchronization Configuration" định nghĩa cluster sẽ giao tiếp và đồng bộ dữ liệu giữa các member như thế nào. Trong cấu hình này đơn giản ta sử dụng rsync
 - Phần "Galera Node Configuration" được sử dụng để làm rõ địa  chỉ IP và tên của server đang cấu hình. Điều này hỗ trợ khi troubeshoot các vấn đề trong logs
 
-##4. Copy cấu hình bảo trì Debian
+##2.4. Copy cấu hình bảo trì Debian
 
 Hiện tại. Ubuntu và máy chủ MariaDB Debian sử dụng 1 user bảo trì đặc biejn để bảo dưỡng định kì.
 
@@ -169,7 +169,7 @@ basedir  = /usr
 ```
 
 
-##5. Start cluster
+##2.5. Start cluster
 
 Để bắt đầu ta cần stop dịch vụ MariaDB trên các node.
 
@@ -183,7 +183,7 @@ Tại 2 node còn lại ta start MariaDB
 
 `service mysql start`
 
-##6 Test Master-Master
+##2.6 Test Master-Master
 
 Tạo database trên node 1 
 
