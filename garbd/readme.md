@@ -6,6 +6,7 @@ Thực hiện trên ubuntu 14.04
 Lưu ý đã có hệ thống 2 node mariadb galera
 File cấu hình cluster.cnf có option sau
 
+`wsrep_cluster_address="gcomm://10.10.10.11,10.10.10.12?pc.wait_prim=no"`
 
 #Cài đặt 
 ##Add repo
@@ -31,7 +32,7 @@ Cài đặt garbd
 
 Tạo file cấu hình tại đường dẫn  `/etc/default/garbd` có nội dung sau
 
-`wsrep_cluster_address="gcomm://10.10.10.11,10.10.10.12?pc.wait_prim=no"`
+
 
 ```
 
