@@ -44,5 +44,5 @@ wsrep_node_name="$MY_NODE_NAME"
 EOF
 
 service mysql stop
-mv debian.cnf /etc/mysql/
+mv /root/debian.cnf /etc/mysql/
 service mysql start
