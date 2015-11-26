@@ -8,8 +8,8 @@ File cấu hình cluster.cnf có option sau
 
 `wsrep_cluster_address="gcomm://10.10.10.11,10.10.10.12?pc.wait_prim=no"`
 
-#Cài đặt 
-##Add repo
+##Các bước thực hiện
+###Add repo
 
 `apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A`
 
@@ -26,13 +26,16 @@ Chạy update repo
 
 `apt-get update`
 
-Cài đặt garbd
+###Cài đặt garbd
 
 `apt-get install  percona-xtradb-cluster-garbd-3.x`
+
+
 
 Tạo file cấu hình tại đường dẫn  `/etc/default/garbd` có nội dung sau
 
 
+### Cấu hình
 
 ```
 
