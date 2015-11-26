@@ -177,7 +177,7 @@ basedir  = /usr
 
 Ta start node 1 với lệnh sau
 
-`service mysql start --wsrep-new-cluster`
+`service mysql start --wsrep_new_cluster`
 
 Tại 2 node còn lại ta start MariaDB
 
