@@ -33,6 +33,8 @@ Tạo file cấu hình tại đường dẫn  `/etc/default/garbd` có nội dun
 
 `wsrep_cluster_address="gcomm://10.10.10.11,10.10.10.12?pc.wait_prim=no"`
 
+```
+
 # Copyright (C) 2012 Coedership Oy
 # This config file is to be sourced by garb service script.
 
