@@ -6,6 +6,7 @@ MYSQL2_IP=172.16.79.57
 MYSQL3_IP=172.16.79.58
 MY_NODE_NAME=mysql-03
 MY_IP=$MYSQL3_IP
+MYSQL_PASS='a'
 
 #Install
 sudo apt-get update -y
@@ -14,6 +15,8 @@ apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb9
 add-apt-repository 'deb http://mirrors.syringanetworks.net/mariadb/repo/5.5/ubuntu precise main'
 
 apt-get update
+echo mysql-server mysql-server/root_password password $MYSQL_PASS | debconf-set-selections
+echo mysql-server mysql-server/root_password_again password $MYSQL_PASS | debconf-set-selections
 apt-get install -y mariadb-galera-server galera rsync 
 
 cat << EOF > /etc/mysql/conf.d/cluster.cnf
